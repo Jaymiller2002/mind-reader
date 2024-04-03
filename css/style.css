@@ -18,6 +18,11 @@ h1 {
   grid-gap: 22px;
 }
 
+article .card {
+  position: center;
+  align-items: center;
+}
+
 .card {
   display: grid;
   grid-template-rows: max-content 400px 1fr;
