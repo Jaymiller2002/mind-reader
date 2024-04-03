@@ -25,7 +25,7 @@ p{
 }
 
 .cards2{
-  content-visibility: auto;
+  content-visibility: hidden;
 }
 
 .card {
