@@ -30,13 +30,21 @@ p{
   top: 50px; left: 400px; bottom: 50px; right: 50px;
 }
 
-.cards2{
+/*.cards2{
   content-visibility: hidden;
-}
+}*/
 
 .card {
   display: grid;
   grid-template-rows: max-content 400px 1fr;
   place-items: center;
   place-content: center;
+}
+
+#page1 {
+  content-visibility: visible;
+}
+
+#page2 {
+  content-visibility: hidden;
 }
