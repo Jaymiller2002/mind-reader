@@ -23,6 +23,13 @@ p{
   grid-gap: 22px;
 }
 
+.cards1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 22px;
+  content: hidden;
+}
+
 .card {
   display: grid;
   grid-template-rows: max-content 400px 1fr;
