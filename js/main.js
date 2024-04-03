@@ -1,4 +1,7 @@
 // main.js
+const card = document.querySelectorAll(".card");
+
+
 
 
 
