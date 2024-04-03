@@ -22,3 +22,9 @@ h1 {
   display: grid;
   grid-template-rows: max-content 200px 1fr;
 }
+
+.content{
+  align-items: end;
+  text-align: end;
+  text-size-adjust: 10px;
+}
