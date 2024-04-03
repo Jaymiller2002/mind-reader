@@ -21,6 +21,9 @@ p{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 22px;
+  position: center;
+  top: 50px;
+  left: 50px;
   content-visibility: visible;
 }
 
