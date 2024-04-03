@@ -1,8 +1,6 @@
 // main.js
-const card = document.querySelectorAll(".card");
-
-
-
+const page1 = document.querySelectorAll(".cards");
+const page2 = document.querySelectorAll("..cards");
 
 
 function init(){
