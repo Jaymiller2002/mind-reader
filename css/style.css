@@ -26,7 +26,8 @@ p{
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 22px;
   content-visibility: visible;
-  object-position: 50% 50%;
+  position: relative;
+  top: 50px; left: 50px; bottom: 50px; right: 50px;
 }
 
 .cards2{
