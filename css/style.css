@@ -3,7 +3,10 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-  position: center;
+  align-items: center;
+  text-align: center;
+  place-content: center;
+  place-items: center;
 }
 
 h1 {
