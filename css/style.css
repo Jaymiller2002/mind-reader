@@ -9,6 +9,10 @@ body {
   place-items: center;
 }
 
+article{
+  object-position: 50% 50%;
+}
+
 h1 {
   font-style: italic;
   color: pink;
