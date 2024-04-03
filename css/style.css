@@ -8,4 +8,6 @@ body {
 h1 {
   font-style: italic;
   color: pink;
+  align-items: center;
+  text-align: center;
 }
