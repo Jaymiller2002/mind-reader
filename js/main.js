@@ -1,6 +1,9 @@
 // main.js
-const page1 = document.querySelectorAll(".cards");
-const page2 = document.querySelectorAll("..cards");
+const page1 = '.cards';
+switch ('page1'){
+case 'page2':
+  break;
+}
 
 
 function init(){
