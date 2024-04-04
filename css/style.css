@@ -8,7 +8,7 @@ body {
   text-align: center;
   place-content: center;
   place-items: center;
-  overflow: hidden;
+  overflow: none;
 }
 
 h1 {
