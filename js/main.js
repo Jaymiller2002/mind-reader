@@ -16,3 +16,11 @@ button.forEach(function(btn)) {
 btn.addEventListener("click", handleEvent);
 }
 //setup for linking to other page's
+
+
+
+//Multiples of 9 function for 1-99
+
+
+//Random emoji generator
+
