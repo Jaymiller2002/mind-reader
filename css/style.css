@@ -26,6 +26,7 @@ p{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 22px;
+  top: 20px;
   border: 1 px solid black;
 }
 /* card positioning*/
@@ -62,3 +63,4 @@ button {
 button:hover {
   background-color: #0056b3 transparent;
 }
+
