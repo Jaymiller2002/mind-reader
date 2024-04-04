@@ -1,16 +1,12 @@
 // main.js
-function showPage(pageNumber) {
-  // Hide all pages
-  for (let i = 1; i <= 6; i++) {
-    let page = document.getElementById('page' + i);
-    if (page) {
-      page.classList.add('hidden');
-    }
+let currentPageIndex = 0;
+let cards = document.querySelectorAll('.card');
+
+function showNextPage() {
+  cards[currentPageIndex].classList.remove('visible');
+  currentPageIndex++;
+  if (currentPageIndex >= cards.length) {
+    currentPageIndex = 0;
   }
-  // Show the requested page
-  let currentPage = document.getElementById('page' + pageNumber);
-  if (currentPage) {
-    currentPage.classList.remove('hidden');
-    currentPage.classList.add('visible');
-  }
+  cards[currentPageIndex].classList.add('visible');
 }
