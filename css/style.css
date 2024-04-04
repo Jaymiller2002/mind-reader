@@ -33,7 +33,7 @@ p{
 }
 
 .card {
-  display: grid;
+  display: flex;
   grid-template-rows: max-content 400px 1fr;
   place-items: center;
   place-content: center;
