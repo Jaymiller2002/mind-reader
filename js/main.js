@@ -1,35 +1,19 @@
 // main.js
-document.getElementById('showPage2').addEventListener('click', function() {
-  document.getElementById('page1').style.display = 'none';
-  document.getElementById('page2').style.display = 'block';
-});
-
-document.getElementById('showPage3').addEventListener('click', function() {
-  document.getElementById('page2').style.display = 'none';
-  document.getElementById('page3').style.display = 'block';
-});
-
-document.getElementById('showPage4').addEventListener('click', function() {
-  document.getElementById('page3').style.display = 'none';
-  document.getElementById('page4').style.display = 'block';
-});
-
-document.getElementById('showPage5').addEventListener('click', function() {
-  document.getElementById('page4').style.display = 'none';
-  document.getElementById('page5').style.display = 'block';
-});
-
-document.getElementById('showPage6').addEventListener('click', function() {
-  document.getElementById('page5').style.display = 'none';
-  document.getElementById('page6').style.display = 'block';
-});
-
-document.getElementById('showPage1').addEventListener('click', function() {
-  document.getElementById('page6').style.display = 'none';
-  document.getElementById('page1').style.display = 'block';
-});
 function init(){
   console.log("hello world!");
 }
 
-init()
+init();
+
+// Get all elements with class 'showPage' (i.e., all the buttons)
+let buttons = document.querySelectorAll('.showPage');
+
+// Loop through each button and add event listener
+buttons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    let currentPage = this.parentElement.parentElement.parentElement; // Get the parent div of the button (i.e., the current page)
+    let nextPage = currentPage.nextElementSibling || document.getElementById('page1'); // Get the next page or loop back to the first page if it's the last one
+    currentPage.style.display = 'none'; // Hide the current page
+    nextPage.style.display = 'block'; // Show the next page
+  });
+});
