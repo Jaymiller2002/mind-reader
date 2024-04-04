@@ -19,7 +19,7 @@ btn.addEventListener("click", handleEvent);
 let visible = document.getElementById('.visible');
 
 visible.onclick = function() {
-  let div = document.getElementById('page2');
+  let div = document.getElementById('page1');
   if (div.style.display !== 'none') {
     div.style.display = 'none';
   }
