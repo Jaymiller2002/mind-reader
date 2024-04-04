@@ -1,6 +1,8 @@
 // main.js
 let currentPageIndex = 0;
 let cards = document.querySelectorAll('.card');
+let button = document.querySelectorAll('.button');
+
 
 function showPage() {
   cards(currentPageIndex).classList.remove('visible');
