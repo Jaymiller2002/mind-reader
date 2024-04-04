@@ -17,11 +17,11 @@ btn.addEventListener("click", handleEvent);
 }
 
 //setup for linking to other page's
-let div = document.getElementById('#page1'); // Assumes element with id= page1
+let div = document.getElementById('#page2'); // Assumes element with id= page1
 
 button.onclick = function() {
     let div = document.getElementById('#page2');
-    if (div.style.display !== 'none') {
+    if (div.style.display === 'none') {
         div.style.display = 'block';
     }
     else {
