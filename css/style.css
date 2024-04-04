@@ -39,6 +39,10 @@ p{
   place-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Show the current card */
 .visible {
   display: block;
