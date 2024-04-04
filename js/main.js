@@ -10,5 +10,5 @@ init()
 //setup
 
 function myFunction(){
-  document.getElementById(".style").style.display = "page2";
+  document.getElementById("page1").onchange.display = "page2";
 }
