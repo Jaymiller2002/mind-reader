@@ -10,5 +10,6 @@ init()
 //setup
 
 function myFunction(){
+  Object.addEventListener("click", myFunction());
   document.getElementById(".style").style.display = "page2";
 }
