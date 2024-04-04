@@ -33,14 +33,10 @@ p{
 }
 
 .card {
-  display: flex;
+  display: grid;
   grid-template-rows: max-content 400px 1fr;
   place-items: center;
   place-content: center;
-}
-
-.hidden {
-  display: none;
 }
 
 /* Show the current card */
