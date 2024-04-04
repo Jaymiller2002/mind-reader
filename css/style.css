@@ -40,11 +40,3 @@ p{
   place-items: center;
   place-content: center;
 }
-
-#page1 {
-  content-visibility: visible;
-}
-
-#page2 {
-  content-visibility: hidden;
-}
