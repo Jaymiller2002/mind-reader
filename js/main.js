@@ -8,6 +8,7 @@ init()
 
 
 //setup
+
 function myFunction(){
-  document.getElementById(".style").onchange.display = "page2";
+  document.getElementById(".style").style.display = "page2";
 }
