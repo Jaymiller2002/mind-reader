@@ -8,4 +8,6 @@ init()
 
 
 //setup
-const page1 = document.querySelectorAll('.cards');
+function myFunction(){
+  document.getElementById(".style").onchange.display = "page2";
+}
