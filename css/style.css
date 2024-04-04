@@ -4,18 +4,11 @@ body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 0;
   padding: 0;
-  align-items: center;
-  text-align: center;
-  place-content: center;
-  place-items: center;
-  overflow: hidden;
 }
 
 h1 {
   font-style: italic;
   color: pink;
-  align-items: center;
-  text-align: center;
 }
 
 p{
@@ -27,21 +20,22 @@ p{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 22px;
-  position: relative;
-  top: 50px; left: 500px; bottom: 50px; right: 50px;
   border: 1 px solid black;
 }
 
 .card {
   display: grid;
   grid-template-rows: max-content 400px 1fr;
-  place-items: center;
-  place-content: center;
 }
 
 /* Show the current card */
 .visible {
   display: block;
+}
+
+/* Hide current Card*/
+.hidden {
+  display: none;
 }
 
 /* Button styling */
