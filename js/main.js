@@ -3,7 +3,7 @@ function init(){
   console.log("hello world!");
 }
 
-init()
+init(PopStateEvent);
 //setup function that calls to page and switches it with another
 //setup
 const button = document.querySelectorAll('.btn');
