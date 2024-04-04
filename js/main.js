@@ -1,19 +1,15 @@
 // main.js
-//function init(){
- // console.log("hello world!");
-//}
-
-//init();
-
-// Get all elements with class 'showPage' (i.e., all the buttons)
-let buttons = document.querySelectorAll('.showPage');
-
-// Loop through each button and add event listener
-buttons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    let currentPage = this.closest('.cards').parentElement; // Get the parent div of the button (i.e., the current page)
-    let nextPage = currentPage.nextElementSibling || document.getElementById('page1'); // Get the next page or loop back to the first page if it's the last one
-    currentPage.style.display = 'none'; // Hide the current page
-    nextPage.style.display = 'block'; // Show the next page
-  });
-});
+function showPage(pageNumber) {
+  // Hide all pages
+  for (let i = 1; i <= 6; i++) {
+    let page = document.getElementById('page' + i);
+    if (page) {
+      page.style.display = 'none';
+    }
+  }
+  // Show the requested page
+  let currentPage = document.getElementById('page' + pageNumber);
+  if (currentPage) {
+    currentPage.style.display = 'block';
+  }
+}
