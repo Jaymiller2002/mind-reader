@@ -26,7 +26,6 @@ p{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 22px;
-  top: 20px;
   border: 1 px solid black;
 }
 /* card positioning*/
@@ -34,6 +33,7 @@ p{
   display: grid;
   grid-template-rows: max-content 400px 1fr;
   left: 500px;
+  top: 20px;
 }
 
 /* Show the current card */
