@@ -15,8 +15,12 @@ const content = document.querySelectorAll('.content');
 button.forEach(function(btn)) {
 btn.addEventListener("click", handleEvent);
 }
+
+cards.forEach(function(cards)) {
+  cards.addEventListener("click", handleEvent);
+}
 //setup for linking to other page's
-let div = document.getElementById('#page1'); // Assumes element with id='button'
+let div = document.getElementById('#page1'); // Assumes element with id= page1
 
 button.onclick = function() {
     let div = document.getElementById('#page2');
@@ -27,6 +31,7 @@ button.onclick = function() {
         div.style.display = 'none';
     }
 };
+
 
 
 //Multiples of 9 function for 1-99
