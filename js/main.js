@@ -15,5 +15,7 @@ button.forEach(function(btn)){
 btn.addEventListener("click", handleEvent);
 }
 
+cards.forEach(function(cards)){
+  cards.addEventListener("click", handleEvent);
+}
 //setup for linking to other page id's
-document.getElementById("page1").innerHTML = "page2";
