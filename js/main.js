@@ -1,9 +1,9 @@
 // main.js
-function init(){
-  console.log("hello world!");
-}
+//function init(){
+ // console.log("hello world!");
+//}
 
-init();
+//init();
 
 // Get all elements with class 'showPage' (i.e., all the buttons)
 let buttons = document.querySelectorAll('.showPage');
