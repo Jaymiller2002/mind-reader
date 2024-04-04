@@ -16,26 +16,3 @@ button.forEach(function(btn)) {
 btn.addEventListener("click", handleEvent);
 }
 //setup for linking to other page's
-let visible = document.getElementById('.visible');
-
-visible.onclick = function() {
-  let div = document.getElementById('page1');
-  if (div.style.display !== 'none') {
-    div.style.display = 'none';
-  }
-  else {
-    div.style.display = 'block';
-  }
-};
-
-let hidden = document.getElementById('.hidden');
-
-hidden.onclick = function() {
-  let div = document.getElementById('page2');
-  if (div.style.display !== 'none') {
-    div.style.display = 'none';
-  }
-  else {
-    div.style.display = 'block';
-  }
-}
