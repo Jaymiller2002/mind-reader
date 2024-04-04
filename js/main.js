@@ -18,7 +18,7 @@ btn.addEventListener("click", handleEvent);
 
 //setup for linking to other page's
 window.onload = function() {
-	document.addEventListener('click', function(e) {
+	document.addEventListener('click', function() {
 	  document.getElementById("page1").id = 'page2';
 	  document.getElementById("page2").id ="page1";
 	})
