@@ -17,7 +17,7 @@ btn.addEventListener("click", handleEvent);
 
 
 //setup for linking to other page id's
-let next = document.getElementById('next'); // your DOM element
+let next = document.getElementById('page2'); // your DOM element
 
 next.addEventListener('click', function() {
 
