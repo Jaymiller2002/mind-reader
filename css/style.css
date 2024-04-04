@@ -21,14 +21,14 @@ p{
   position: relative;
   top: 170px; left: 80px;
 }
-
+/*Card size*/
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 22px;
   border: 1 px solid black;
 }
-
+/* card positioning*/
 .card {
   display: grid;
   grid-template-rows: max-content 400px 1fr;
@@ -60,5 +60,5 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3 transparent;
 }
