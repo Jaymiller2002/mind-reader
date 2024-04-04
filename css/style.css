@@ -43,7 +43,7 @@ p{
 
 /* Hide current Card*/
 .hidden {
-  display: block;
+  display: hidden;
 } 
 
 /* Button styling */
