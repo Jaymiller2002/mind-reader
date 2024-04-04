@@ -2,7 +2,7 @@
 let currentPageIndex = 0;
 let cards = document.querySelectorAll('.card');
 
-function showNextPage() {
+function showPage() {
   cards(currentPageIndex).classList.remove('visible');
   currentPageIndex++;
   if (currentPageIndex >= cards.length) {
