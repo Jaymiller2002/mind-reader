@@ -16,3 +16,4 @@ btn.addEventListener("click", handleEvent);
 }
 
 //setup for linking to other page id's
+document.getElementById("page1").innerHTML = "page2";
