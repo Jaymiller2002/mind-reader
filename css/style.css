@@ -25,7 +25,6 @@ p{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 22px;
-  content-visibility: visible;
   position: relative;
   top: 50px; left: 400px; bottom: 50px; right: 50px;
   border: 1 px solid black;
