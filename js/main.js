@@ -12,7 +12,7 @@ const content = document.querySelectorAll('.content');
 
 
 //Event Listeners
-button.forEach(function(btn)) {
+button.forEach(function(btn));{
 btn.addEventListener("click", handleEvent);
 }
 
