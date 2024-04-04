@@ -17,18 +17,3 @@ btn.addEventListener("click", handleEvent);
 
 
 //setup for linking to other page's
-$(document).ready(
-  function() {
-    $(".btn").click(function() {
-      $(".hidden_div").show("slow");
-      $("#page1").hide("slow");
-      $($this).show("slow");
-    });
-
-    $(".btn").click(function() {
-      $(".hidden_div").hide("slow");
-      $("#page2").show("slow");
-      $($this).hide("slow");
-
-    });
-  });
