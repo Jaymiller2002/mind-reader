@@ -24,5 +24,5 @@ document.getElementById("page1").addEventListener("click", someFunction);
 //Multiples of 9 function for 1-99
 
 
-//Random emoji generator
+//Random symbol generator
 
