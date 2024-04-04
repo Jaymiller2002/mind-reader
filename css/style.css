@@ -33,7 +33,7 @@ p{
   display: grid;
   grid-template-rows: max-content 400px 1fr;
   left: 500px;
-  top: 20px;
+  top: 50px;
 }
 
 /* Show the current card */
