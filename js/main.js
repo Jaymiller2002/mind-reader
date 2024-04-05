@@ -20,9 +20,18 @@ btn.addEventListener("click", handleEvent);
 document.getElementById("page1").addEventListener("click", someFunction);
 
 
+//functions
+function showPage(pageNumber) {
+  // Hide all pages
+  const pages = document.querySelectorAll('.hidden');
+  pages.forEach(page => {
+      page.classList.add('hidden');
+  });
 
-//Multiples of 9 function for 1-99
-
-
-//Random symbol generator
+  // Show the page with the specified number
+  const currentPage = document.getElementById(`page${pageNumber}`);
+  if (currentPage) {
+      currentPage.classList.remove('hidden');
+  }
+}
 
