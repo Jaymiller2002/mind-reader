@@ -36,10 +36,10 @@ function showNextPage(pageNumber) {
         page.classList.add('hidden');
     });
 
-    // Show the page with the specified number
-    const currentPage = document.getElementById(`page${pageNumber}`);
+   // Show the page with the specified number
+   const currentPage = document.getElementById(`page${pageNumber}`);
     if (currentPage) {
-        currentPage.classList.remove('hidden');
+       currentPage.classList.remove('hidden');
     }
 }
 

@@ -42,9 +42,9 @@ p{
 }*/
 
 /* Show the current page */
-.page.visible {
+/*.page.visible {
   display: block;
-}
+}*/
 
 .hidden {
   display: none;
