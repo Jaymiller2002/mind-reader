@@ -1,7 +1,7 @@
 // Function to show a specific page and hide others
 function showPage(pageNumber) {
   // Hide all pages
-  const pages = document.querySelectorAll('.hidden');
+  const pages = document.querySelectorAll('.cards');
   pages.forEach(page => {
       page.classList.add('hidden');
   });
