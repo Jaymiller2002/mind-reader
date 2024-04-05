@@ -2,6 +2,7 @@
 let currentPageIndex = 1; // Start with page 1
 
 function showTheNextPage() {
+  console.log("current page start", currentPageIndex)
     switch (currentPageIndex) {
         case 1:
             currentPageIndex = 2;
@@ -24,6 +25,7 @@ function showTheNextPage() {
         default:
             currentPageIndex = 1;
     }
+    console.log("showing next page", currentPageIndex)
     showNextPage(currentPageIndex);
 }
 
