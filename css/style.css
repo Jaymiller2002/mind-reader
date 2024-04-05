@@ -46,6 +46,10 @@ p{
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Button styling */
 button {
   position: absolute;
