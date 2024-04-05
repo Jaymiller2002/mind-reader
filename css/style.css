@@ -36,10 +36,15 @@ p{
   top: 50px;
 }
 
-/* Hide current Card*/
-.hidden {
+/* Hide all pages by default */
+.page {
   display: none;
-} 
+}
+
+/* Show the current page */
+.page.visible {
+  display: block;
+}
 
 /* Button styling */
 button {
