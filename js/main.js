@@ -1,7 +1,7 @@
 // main.js
 let currentPageIndex = 1; // Start with page 1
 
-function showNextPage() {
+function showTheNextPage() {
     switch (currentPageIndex) {
         case 1:
             currentPageIndex = 2;
