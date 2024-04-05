@@ -27,7 +27,7 @@ function showNextPage() {
     showPage(currentPageIndex);
 }
 
-function showPage(pageNumber) {
+function showNextPage(pageNumber) {
     // Hide all pages
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => {
