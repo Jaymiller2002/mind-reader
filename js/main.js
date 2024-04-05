@@ -43,3 +43,13 @@ function showNextPage(pageNumber) {
     }
 }
 
+//Number generator
+function generateNumbers() {
+  let minNumber = 0; // The minimum number you want
+  let maxNumber = 100; // The maximum number you want
+  let randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
+  document.getElementById("number").innerHTML = randomnumber; // Sets content of <div> to number
+  return false; // Returns false just to tidy everything up
+}
+
+window.onload = generateNumbers; // Runs the function on click
