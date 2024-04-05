@@ -1,26 +1,4 @@
-// main.js
-function init(){
-  console.log("hello world!");
-}
-
-init()
-//setup function that calls to page and switches it with another
-//setup
-const button = document.querySelectorAll('.btn');
-const cards = document.querySelectorAll('.cards');
-const content = document.querySelectorAll('.content');
-
-
-//Event Listeners
-button.forEach(function(btn));{
-btn.addEventListener("click", handleEvent);
-}
-
-//setup for linking to other page's
-document.getElementById("page1").addEventListener("click", someFunction);
-
-
-//functions
+// Function to show a specific page and hide others
 function showPage(pageNumber) {
   // Hide all pages
   const pages = document.querySelectorAll('.hidden');
@@ -32,6 +10,15 @@ function showPage(pageNumber) {
   const currentPage = document.getElementById(`page${pageNumber}`);
   if (currentPage) {
       currentPage.classList.remove('hidden');
+      // Add event listener to the button on the current page
+      const nextPageButton = currentPage.querySelector('.btn');
+      if (nextPageButton) {
+          nextPageButton.addEventListener('click', () => {
+              // Show the next page when the button is clicked
+              const nextPageNumber = pageNumber + 1;
+              showPage(nextPageNumber);
+          });
+      }
   }
 }
 

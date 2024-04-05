@@ -36,11 +36,6 @@ p{
   top: 50px;
 }
 
-/* Show the current card */
-.visible {
-  display: block;
-}
-
 /* Hide current Card*/
 .hidden {
   display: none;
@@ -62,28 +57,4 @@ button {
 
 button:hover {
   background-color: #0056b3 transparent;
-}
-
-#page1{
-  background-color: white transparent;
-}
-
-#page2{
-  background-color: white transparent;
-}
-
-#page3{
-  background-color: white transparent;
-}
-
-#page4{
-  background-color: white transparent;
-}
-
-#page5{
-  background-color: white transparent;
-}
-
-#page6{
-  background-color: white transparent;
 }
