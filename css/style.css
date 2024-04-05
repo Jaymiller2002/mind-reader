@@ -36,10 +36,10 @@ p{
   top: 50px;
 }
 
-/* Hide all pages by default */
+/* Hide all pages by default 
 .page {
   display: none;
-}
+}*/
 
 /* Show the current page */
 .page.visible {
