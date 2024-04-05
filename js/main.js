@@ -24,7 +24,7 @@ function showNextPage() {
         default:
             currentPageIndex = 1;
     }
-    showPage(currentPageIndex);
+    showNextPage(currentPageIndex);
 }
 
 function showNextPage(pageNumber) {
