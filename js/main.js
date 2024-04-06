@@ -55,9 +55,7 @@ function generateNumbers() {
 window.onload = generateNumbers; // Runs the function on click
 
 //Random symbol generator
-function generateSymbols() {
-  let symbols = "!@#$%^&*?"
-}
+
 
 //Any event listeners
 
