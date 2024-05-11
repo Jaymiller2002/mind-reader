@@ -59,56 +59,53 @@
 
 //Any event listeners
 
-// Define initial variables
-let currentView = 1;
-const symbols = ['icon1', 'icon2', 'icon3', 'icon4', 'icon5', 'icon6', 'icon7', 'icon8', 'icon9'];
+// Get references to buttons
+const startButton = document.getElementById('startButton');
+const nextButton2 = document.getElementById('nextButton2');
+const nextButton3 = document.getElementById('nextButton3');
+const nextButton4 = document.getElementById('nextButton4');
+const nextButton5 = document.getElementById('nextButton5');
+const startOverButton = document.getElementById('startOverButton');
 
-// Function to render the current view
-function renderView() {
-    const views = document.querySelectorAll('.view');
-    views.forEach(view => {
-        view.classList.add('hidden');
-    });
+// Get references to views
+const view1 = document.getElementById('view1');
+const view2 = document.getElementById('view2');
+const view3 = document.getElementById('view3');
+const view4 = document.getElementById('view4');
+const view5 = document.getElementById('view5');
+const view6 = document.getElementById('view6');
 
-    const currentViewElement = document.getElementById(`view${currentView}`);
-    currentViewElement.classList.remove('hidden');
+// Event listeners for button clicks
+startButton.addEventListener('click', function() {
+    switchView(view1, view2);
+});
 
-    if (currentView === 2) {
-        renderSymbolOptions();
-    } else if (currentView === 3) {
-        renderChosenSymbol();
-    }
+nextButton2.addEventListener('click', function() {
+    switchView(view2, view3);
+});
+
+startOverButton.addEventListener('click', function() {
+    switchView(view3, view1);
+});
+
+nextButton3.addEventListener('click', function() {
+    switchView(view3, view4);
+});
+
+nextButton4.addEventListener('click', function() {
+    switchView(view4, view5);
+});
+
+nextButton5.addEventListener('click', function() {
+    switchView(view5, view6);
+});
+
+startOverButton.addEventListener('click', function() {
+    switchView(view6, view1);
+}); 
+
+// Function to switch between views
+function switchView(currentView, nextView) {
+    currentView.classList.remove('visible');
+    nextView.classList.add('visible');
 }
-
-// Function to render symbol options
-function renderSymbolOptions() {
-    const symbolOptionsContainer = document.querySelector('.symbol-options');
-    symbolOptionsContainer.innerHTML = '';
-    symbols.forEach(symbol => {
-        const symbolElement = document.createElement('div');
-        symbolElement.classList.add('symbol-option');
-        symbolElement.innerHTML = `<i class="fas fa-${symbol}"></i>`;
-        symbolElement.addEventListener('click', () => {
-            document.getElementById('chosen-symbol').innerHTML = `<i class="fas fa-${symbol}"></i>`;
-        });
-        symbolOptionsContainer.appendChild(symbolElement);
-    });
-}
-
-// Function to move to the next view
-function moveToNextView() {
-    currentView++;
-    if (currentView > 3) {
-        currentView = 3;
-    }
-    renderView();
-}
-
-// Function to reset to the first view
-function resetToFirstView() {
-    currentView = 1;
-    renderView();
-}
-
-// Initial rendering of the first view
-renderView();

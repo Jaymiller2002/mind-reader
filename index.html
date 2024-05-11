@@ -120,27 +120,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mind Reader App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS styles -->
+
 </head>
 <body>
-    <div id="app">
-        <div id="view1" class="view">
-            <h1>Welcome to Mind Reader App</h1>
-            <button onclick="moveToNextView()">Start</button>
-        </div>
-        <div id="view2" class="view hidden">
-            <h2>Select a Symbol</h2>
-            <div class="symbol-options">
-                <!-- Symbol options will be added dynamically -->
+    <div class="container">
+        <div id="app">
+            <div id="view1" class="view visible">
+                <h1>Welcome to Mind Reader App</h1>
+                <button id="startButton">Start</button>
             </div>
-            <button onclick="moveToNextView()">Next</button>
-        </div>
-        <div id="view3" class="view hidden">
-            <h2>Your Chosen Symbol:</h2>
-            <div id="chosen-symbol"></div>
-            <button onclick="resetToFirstView()">Start Over</button>
+            <div id="view2" class="view">
+                <h2>Select a Symbol</h2>
+                <div class="symbol-options">
+                    <!-- Symbol options will be added dynamically -->
+                </div>
+                <button id="nextButton2">Next</button>
+            </div>
+            <div id="view3" class="view">
+                <h2>Your Chosen Symbol:</h2>
+                <div id="chosen-symbol"></div>
+                <button id="nextButton3">Start Over</button>
+            </div>
+            <!-- New views -->
+            <div id="view4" class="view">
+                <h2>View 4</h2>
+                <button id="nextButton4">Next</button>
+            </div>
+            <div id="view5" class="view">
+                <h2>View 5</h2>
+                <button id="nextButton5">Next</button>
+            </div>
+            <div id="view6" class="view">
+                <h2>View 6</h2>
+                <button id="startOverButton">Start Over</button>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- JavaScript file -->
 </body>
 </html>
