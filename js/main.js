@@ -66,6 +66,7 @@ const nextButton3 = document.getElementById('nextButton3');
 const nextButton4 = document.getElementById('nextButton4');
 const nextButton5 = document.getElementById('nextButton5');
 const startOverButton = document.getElementById('startOverButton');
+const restartButton = document.getElementById('restartButton'); // New restart button
 
 // Get references to views
 const view1 = document.getElementById('view1');
@@ -104,8 +105,97 @@ startOverButton.addEventListener('click', function() {
     switchView(view6, view1);
 }); 
 
+restartButton.addEventListener('click', function() {
+    switchView(view6, view1);
+}); 
+
 // Function to switch between views
 function switchView(currentView, nextView) {
     currentView.classList.remove('visible');
     nextView.classList.add('visible');
+    // Store the current view in localStorage
+    localStorage.setItem('currentView', nextView.id);
 }
+
+// Function to generate random symbol options
+function generateSymbolOptions() {
+    const symbols = [
+        '❤️', '☘️', '⚡️', '✨', '☁️', '☀️', '❄️', '⭐️', '✈️', '⚓️',
+        '☎️', '☂️', '☕️', '⚽️', '⚾️', '🏀', '🏈', '🎾', '🏐', '🏉',
+        '🎱', '🎳', '🏏', '🏒', '🥅', '🏑', '🏸', '🏓', '🏋️‍♂️', '🏋️‍♀️',
+        '🚴‍♂️', '🚴‍♀️', '🚵‍♂️', '🚵‍♀️', '🤸‍♂️', '🤸‍♀️', '🤽‍♂️', '🤽‍♀️', '🏄‍♂️', '🏄‍♀️',
+        '🏇', '🏊‍♂️', '🏊‍♀️', '🚣‍♂️', '🚣‍♀️', '🏌️‍♂️', '🏌️‍♀️', '🏹', '🎣', '🥊',
+        '🥋', '⛷️', '🏂', '🏋️‍♂️', '🤼‍♂️', '🤼‍♀️', '🤸‍♂️', '⛹️‍♂️', '⛹️‍♀️', '🤺', '🤾‍♂️',
+        '🤾‍♀️', '🏌️‍♂️', '🏌️‍♀️', '🏄‍♂️', '🏄‍♀️', '🏊‍♂️', '🏊‍♀️', '🤽‍♂️', '🤽‍♀️', '🚣‍♂️', '🚣‍♀️',
+        '🧗‍♂️', '🧗‍♀️', '🚴‍♂️', '🚴‍♀️', '🚵‍♂️', '🚵‍♀️', '🏇', '🏂', '🏋️‍♂️', '🏋️‍♀️', '🤼‍♂️',
+        '🤼‍♀️', '🤸‍♂️', '🤸‍♀️', '⛹️‍♂️', '⛹️‍♀️', '🤾‍♂️', '🤾‍♀️', '🏌️‍♂️', '🏌️‍♀️', '🏄‍♂️', '🏄‍♀️',
+        '🏊‍♂️', '🏊‍♀️', '🤽‍♂️', '🤽‍♀️', '🚣‍♂️', '🚣‍♀️', '🧗‍♂️', '🧗‍♀️', '🚴‍♂️', '🚴‍♀️', '🚵‍♂️', '🚵‍♀️'
+    ];
+
+    const symbolOptionsContainer = document.querySelector('.symbol-options');
+    symbolOptionsContainer.innerHTML = ''; // Clear previous options
+
+    // Shuffle symbols array
+    for (let i = symbols.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [symbols[i], symbols[j]] = [symbols[j], symbols[i]];
+    }
+
+    symbols.forEach(function(symbol) {
+        const button = document.createElement('button');
+        button.textContent = symbol;
+        button.onclick = function() {
+            document.getElementById('chosen-symbol').textContent = symbol;
+            switchView(view2, view3);
+        };
+        symbolOptionsContainer.appendChild(button);
+    });
+}
+
+// Generate symbol options when view2 is displayed
+view2.addEventListener('click', function() {
+    generateSymbolOptions();
+});
+
+// Check if current view is stored in localStorage and display it
+window.onload = function() {
+    const currentViewId = localStorage.getItem('currentView');
+    if (currentViewId) {
+        const currentView = document.getElementById(currentViewId);
+        const visibleView = document.querySelector('.view.visible');
+        if (visibleView) {
+            visibleView.classList.remove('visible');
+        }
+        if (currentView) {
+            currentView.classList.add('visible');
+        }
+    }
+};
+
+// Inside view4 event listener
+const calculateButton4 = document.getElementById('calculateButton4');
+calculateButton4.addEventListener('click', function() {
+    const num1 = parseInt(document.getElementById('num1').value);
+    const num2 = parseInt(document.getElementById('num2').value);
+    const total1 = num1 + num2;
+    document.getElementById('total').textContent = `Total: ${total1}`;
+});
+
+// Inside view5 event listener
+const calculateButton5 = document.getElementById('calculateButton5');
+calculateButton5.addEventListener('click', function() {
+    const num3 = parseInt(document.getElementById('num3').value);
+    const num4 = parseInt(document.getElementById('num4').value);
+    const total2 = num3 * num4;
+    document.getElementById('total').textContent = `Total: ${total2}`;
+});
+
+// Inside view6 event listener
+nextButton5.addEventListener('click', function() {
+    switchView(view5, view6);
+    const total1 = parseInt(document.getElementById('total1').textContent.split(':')[1].trim());
+    const total2 = parseInt(document.getElementById('total2').textContent.split(':')[1].trim());
+    const symbol = document.getElementById('chosen-symbol').textContent;
+    const total = total1 + total2;
+    document.getElementById('symbol-and-total').textContent = `${symbol} - Total: ${total}`;
+});

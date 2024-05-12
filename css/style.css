@@ -111,8 +111,11 @@ h1, h2 {
 
 .symbol-options {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  flex-direction: column; /* Display options vertically */
+  align-items: center; /* Align items to the start of the column */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 200px; /* Set maximum height for the column */
+  padding-right: 5px; /* Add padding to prevent scrollbar from overlapping content */
 }
 
 .symbol-option {
