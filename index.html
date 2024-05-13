@@ -122,7 +122,6 @@
     <title>Mind Reader App</title>
     <link rel="stylesheet" href="./css/style.css">
     <!-- CSS styles -->
-
 </head>
 <body>
     <div class="container">
@@ -145,15 +144,21 @@
             </div>
             <!-- New views -->
             <div id="view4" class="view">
-                <h2>View 4</h2>
-                <button id="nextButton4">Next</button>
+                <h2>Math Puzzle</h2>
+                <p>Solve the equation to proceed:</p>
+                <p>2 + 2 = <input type="text" id="mathAnswer"></p>
+                <button id="submitMathButton">Submit</button>
             </div>
             <div id="view5" class="view">
-                <h2>View 5</h2>
-                <button id="nextButton5">Next</button>
+                <h2>Riddle</h2>
+                <p>I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</p>
+                <input type="text" id="riddleAnswer">
+                <button id="submitRiddleButton">Submit</button>
             </div>
             <div id="view6" class="view">
-                <h2>View 6</h2>
+                <h2>Mind Reading Results</h2>
+                <p>Congratulations! The symbol you chose was predicted by the app based on your interactions.</p>
+                <p id="symbol-and-total"></p> <!-- Added element to display the chosen symbol -->
                 <button id="startOverButton">Start Over</button>
             </div>
             <!-- Restart button -->

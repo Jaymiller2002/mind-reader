@@ -63,8 +63,8 @@
 const startButton = document.getElementById('startButton');
 const nextButton2 = document.getElementById('nextButton2');
 const nextButton3 = document.getElementById('nextButton3');
-const nextButton4 = document.getElementById('nextButton4');
-const nextButton5 = document.getElementById('nextButton5');
+const submitMathButton = document.getElementById('submitMathButton');
+const submitRiddleButton = document.getElementById('submitRiddleButton');
 const startOverButton = document.getElementById('startOverButton');
 const restartButton = document.getElementById('restartButton'); // New restart button
 
@@ -93,11 +93,11 @@ nextButton3.addEventListener('click', function() {
     switchView(view3, view4);
 });
 
-nextButton4.addEventListener('click', function() {
+submitMathButton.addEventListener('click', function() {
     switchView(view4, view5);
 });
 
-nextButton5.addEventListener('click', function() {
+submitRiddleButton.addEventListener('click', function() {
     switchView(view5, view6);
 });
 
@@ -179,23 +179,23 @@ calculateButton4.addEventListener('click', function() {
     const num2 = parseInt(document.getElementById('num2').value);
     const total1 = num1 + num2;
     document.getElementById('total').textContent = `Total: ${total1}`;
+    switchView(view4, view5); // Transition to the next view after calculation
 });
 
 // Inside view5 event listener
 const calculateButton5 = document.getElementById('calculateButton5');
 calculateButton5.addEventListener('click', function() {
-    const num3 = parseInt(document.getElementById('num3').value);
-    const num4 = parseInt(document.getElementById('num4').value);
-    const total2 = num3 * num4;
-    document.getElementById('total').textContent = `Total: ${total2}`;
+    const riddleAnswer = document.getElementById('riddleAnswer').value.toLowerCase(); // Convert answer to lowercase for case-insensitive comparison
+    if (riddleAnswer === 'echo') { // Check if the answer is correct
+        switchView(view5, view6); // Transition to view6 if the answer is correct
+    } else {
+        alert('Sorry, that is incorrect. Please try again.'); // Display an alert for incorrect answer
+    }
 });
 
 // Inside view6 event listener
-nextButton5.addEventListener('click', function() {
-    switchView(view5, view6);
-    const total1 = parseInt(document.getElementById('total1').textContent.split(':')[1].trim());
-    const total2 = parseInt(document.getElementById('total2').textContent.split(':')[1].trim());
+submitRiddleButton.addEventListener('click', function() {
+    switchView(view5, view6); // Transition to view6
     const symbol = document.getElementById('chosen-symbol').textContent;
-    const total = total1 + total2;
-    document.getElementById('symbol-and-total').textContent = `${symbol} - Total: ${total}`;
+    document.getElementById('symbol-and-total').textContent = `Your chosen symbol is: ${symbol}`; // Update the display message
 });
